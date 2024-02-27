@@ -639,8 +639,6 @@ html {
   }
 }
 
-/* styles.css */
-
 .table-body {
   box-sizing: border-box;
 }
@@ -707,7 +705,7 @@ html {
   text-decoration: underline;
 }
 
-/* styles.css */
+/* Table styles */
 .table {
   box-sizing: border-box;
   border: 0;
