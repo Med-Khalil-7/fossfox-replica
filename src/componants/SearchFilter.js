@@ -9,6 +9,7 @@ export default function SearchFilter() {
             <div className="form-group">
               <label htmlFor="query">What do you want to work with?</label>
               <div className="input-container">
+                <i className="app-icon fa fa-search" aria-hidden="true" />
                 <input
                   id="query"
                   name="query"
@@ -19,6 +20,7 @@ export default function SearchFilter() {
                   placeholder="Rust, Solidity, React, Kubernetes…"
                   autoFocus
                 />
+
                 <button type="submit">search</button>
               </div>
             </div>

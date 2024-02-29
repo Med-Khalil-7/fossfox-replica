@@ -13,8 +13,8 @@ export default function SearchBox() {
               maxLength="255"
               placeholder="search"
             />
-            <i className="app-icon app-icon-search app-input__icon" aria-hidden="true" />
-            <i className="app-icon app-icon-close" aria-hidden="true" />
+            <i className="app-icon fa fa-search" aria-hidden="true" />
+            {/* <i className="app-icon fa fa-close" aria-hidden="true" /> */}
           </div>
           <div className="app-search__results">
             <menu className="app-menu">

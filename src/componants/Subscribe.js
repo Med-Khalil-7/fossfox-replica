@@ -25,7 +25,7 @@ export default function Subscribe() {
                   required
                   placeholder="you@gmail.com"
                 />
-                <i className="icon" aria-hidden="true"></i>
+                <i className="app-icon fa fa-lock" aria-hidden="true" />
               </div>
             </div>
             <div className="form-group">

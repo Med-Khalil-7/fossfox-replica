@@ -5,7 +5,8 @@ export default function Links() {
       <div className="lib-container">
         <div className="app-label">
           Languages
-          <i className="app-icon app-icon-book" aria-hidden="true" />
+          {" "}
+          <i className="fa fa-book" aria-hidden="true" />
         </div>
         <ul>
           <li>
@@ -33,7 +34,8 @@ export default function Links() {
       <div className="lib-container">
         <div className="app-label">
           Tech
-          <i className="app-icon app-icon-laptop" aria-hidden="true" />
+          {" "}
+          <i className="fa fa-laptop" aria-hidden="true" />
         </div>
         <ul>
           <li>
@@ -59,7 +61,8 @@ export default function Links() {
       <div className="lib-container">
         <div className="app-label">
           Devs
-          <i className="app-icon app-icon-github" aria-hidden="true" />
+          {" "}
+          <i className="fa fa-github" aria-hidden="true" />
         </div>
         <ul>
           <li>
@@ -82,7 +85,8 @@ export default function Links() {
       <div className="lib-container">
         <div className="app-label">
           Services
-          <i className="app-icon app-icon-laptop" aria-hidden="true" />
+          {" "}
+          <i className="fa fa-code" aria-hidden="true" />
         </div>
         <ul>
           <li>
@@ -105,7 +109,8 @@ export default function Links() {
       <div className="lib-container">
         <div className="app-label">
           Offices
-          <i className="app-icon app-icon-laptop" aria-hidden="true" />
+          {" "}
+          <i className="fa fa-globe" aria-hidden="true" />
         </div>
         <ul>
           <li>

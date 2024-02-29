@@ -130,29 +130,39 @@ export default function Table({ data }) {
                         )}
                         <th className="header-cell" onClick={toggleMenu}>
                             <div className="header-content">...</div>
+                            {menuVisible && (
+                                <div className="menu-container">
+                                    <div className="menu">
+                                        {Object.keys(columns).map(item => (
+
+
+                                            <li>
+                                                <div key={item}>
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={columns[item]}
+                                                        onChange={() => toggle(item)}
+                                                    />
+                                                    <span>{item}</span>
+                                                </div>
+                                            </li>
+
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </th>
+                        
                     </tr>
                 </thead>
+                
                 <tbody className="table-body">
                     {sortedData.map((attributes, index) => (
-                        <TableRow {...attributes} columns={columns} key={index} sortBy={sortBy}/>
+                        <TableRow {...attributes} columns={columns} key={index} sortBy={sortBy} />
                     ))}
                 </tbody>
             </table>
-            {menuVisible && (
-                <div className="menu-popup">
-                    {Object.keys(columns).map(item => (
-                        <div key={item} className="menu-item">
-                            <input
-                                type="checkbox"
-                                checked={columns[item]}
-                                onChange={() => toggle(item)}
-                            />
-                            <label>{item}</label>
-                        </div>
-                    ))}
-                </div>
-            )}
+
         </div>
     );
 }
