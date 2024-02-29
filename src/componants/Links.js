@@ -10,23 +10,23 @@ export default function Links() {
         <ul>
           <li>
             <a className="app-link" href="https://fossfox.com/rust">Rust</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/go">Go</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/go">Go</a>
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/typescript">TypeScript</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/javascript">JS</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/javascript">JS</a>
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/python">Python</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/java">Java</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/java">Java</a>
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/php">PHP</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/ruby">Ruby</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/ruby">Ruby</a>
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/c">C</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/cpp">C++</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/cpp">C++</a>
           </li>
         </ul>
       </div>
@@ -38,7 +38,7 @@ export default function Links() {
         <ul>
           <li>
             <a className="app-link" href="https://fossfox.com/react">React</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/next-js">Next.js</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/next-js">Next.js</a>
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/kubernetes">Kubernetes</a>
@@ -48,11 +48,11 @@ export default function Links() {
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/node-js">Node</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/redis">Redis</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/redis">Redis</a>
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/postgresql">Postgres</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/mysql">MySQL</a>
+            <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/mysql">MySQL</a>
           </li>
         </ul>
       </div>
@@ -110,15 +110,15 @@ export default function Links() {
         <ul>
           <li>
           <a className="app-link" href="https://fossfox.com/jobs-in-san-francisco-california">SF</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/jobs-in-new-york-city">NYC</a>
+          <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/jobs-in-new-york-city">NYC</a>
           </li>
           <li>
           <a className="app-link" href="https://fossfox.com/jobs-in-berlin-germany">Berlin</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/jobs-in-paris-france">Paris</a>
+          <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/jobs-in-paris-france">Paris</a>
           </li>
           <li>
           <a className="app-link" href="https://fossfox.com/jobs-in-united-states">USA</a>{" "}
-            & <a className="app-link" href="https://fossfox.com/jobs-in-canada">Canada</a>
+          <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/jobs-in-canada">Canada</a>
           </li>
           <li>
             <a className="app-link" href="https://fossfox.com/jobs-in-india">India</a>

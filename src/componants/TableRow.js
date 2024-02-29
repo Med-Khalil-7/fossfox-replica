@@ -1,47 +1,108 @@
 import React from 'react';
 
-const TableRow = () => {
-  return (
-    <tbody className="table-body">
-      <tr className="table-row">
-        <td className="table-cell">
-          <div className="cell-content">
-            <span className="index">1</span>
-          </div>
-        </td>
-        <td className="table-cell">
-          <div className="cell-content">
-            <a className="app-link" href="https://fossfox.com/automattic">Automattic</a>
-          </div>
-        </td>
-        <td className="table-cell">
-          <div className="cell-content">
-            <a className="app-link" href="https://fossfox.com/docker">Docker</a>,{' '}
-            <a className="app-link" href="https://fossfox.com/kubernetes">K8s</a>,{' '}
-            <a className="app-link" href="https://fossfox.com/php">PHP</a>,{' '}
-            <a className="app-link" href="https://fossfox.com/automattic">+8 more</a>
-          </div>
-        </td>
-        <td className="table-cell">
-          <div className="cell-content sparkline">
-            <svg className="sparkline-svg" viewBox="0 0 100 18">
-              <polyline className="sparkline-line" points="0 3 4 2 9 2 13 2 17 3 22 3 26 7 30 4 35 3 39 4 43 7 48 3 52 3 57 3 61 5 65 13 70 9 74 3 78 4 83 3 87 5 91 2 96 5 100 0"/>
-            </svg>
-          </div>
-        </td>
-        <td className="table-cell">
-          <div className="cell-content">
-            <a className="app-link" href="https://fossfox.com/senior-system-administrator-at-automattic">Sr SysAdmin</a>
-          </div>
-        </td>
-        <td className="table-cell">
-          <div className="cell-content">
-            <a className="app-link apply-link" href="https://fossfox.com/~5jwg" target="_blank" rel="noopener noreferrer">apply</a>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  );
+
+const TableRow = (props) => {
+    const { index, company, founded, building, stack, oss, activity, offices, hiring, compensation, type, employment, applyLink, columns,sortBy } = props;
+
+    return (
+        <tr className="table-row">
+            <td className="table-cell">
+                <div className="index">
+                    <span className="index">{index}</span>
+                </div>
+            </td>
+
+            <td className={`table-cell ${sortBy === "company" && "selected"}`}>
+                <div className="cell-content">
+                    <a className="app-link" href={company.href}>{company.name}</a>
+                </div>
+            </td>
+            {columns.founded && (
+                <td className={`table-cell ${sortBy === "founded" && "selected"}`}>
+                    <div className="cell-content">
+                        <span>{founded}</span>
+                    </div>
+                </td>
+            )}
+            {columns.building && (
+                <td className={`table-cell ${sortBy === "building" && "selected"}`}>
+                    <div className="cell-content">
+                        <a className="app-link" href={building.href}>{building.name}</a>
+                    </div>
+                </td>)}
+            {columns.stack && (
+                <td className={`table-cell ${sortBy === "stack" && "selected"}`}>
+                    <div className="cell-content">
+                        {stack.map((tech, index) => (
+                            <React.Fragment key={index}>
+                                <a className="app-link" href={tech.href}>{tech.name}</a>
+                                {index < stack.length - 1 && ', '}
+                            </React.Fragment>
+                        ))}
+                    </div>
+                </td>
+            )}
+            {columns.oss && (
+                <td className={`table-cell ${sortBy === "oss" && "selected"}`}>
+                    <div className="cell-content">
+                        <span>{oss ? "✔" : "-"}</span>
+                    </div>
+                </td>
+            )}
+            {columns.activity && (
+                <td className={`table-cell ${sortBy === "activity" && "selected"}`}>
+                    <div className="cell-content sparkline">
+                        <svg className="sparkline-svg" viewBox="0 0 100 18">
+                            <polyline className="sparkline-line" points={activity} />
+                        </svg>
+                    </div>
+                </td>
+            )}
+            {columns.offices && (
+                <td className={`table-cell ${sortBy === "offices" && "selected"}`}>
+                    <div className="cell-content">
+                        {offices.map((tech, index) => (
+                            <React.Fragment key={index}>
+                                <a className="app-link" href={tech.href}>{tech.name}</a>
+                                {index < offices.length - 1 && ', '}
+                            </React.Fragment>
+                        ))}
+                    </div>
+                </td>
+            )}
+            <td className={`table-cell ${sortBy === "hiring" && "selected"}`}>
+                <div className="cell-content">
+                    <a className="app-link" href={hiring.href}>{hiring.name}</a>
+                </div>
+            </td>
+            {columns.compensation && (
+                <td className={`table-cell ${sortBy === "compensation" && "selected"}`}>
+                    <div className="cell-content">
+                        <span >{compensation}</span>
+                    </div>
+                </td>
+            )}
+            {columns.type && (
+                <td className={`table-cell ${sortBy === "type" && "selected"}`}>
+                    <div className="cell-content">
+                        <a className="app-link" href={type.href}>{type.name}</a>
+                    </div>
+                </td>
+            )}
+            {columns.employment && (
+                <td className={`table-cell ${sortBy === "employment" && "selected"}`}>
+                    <div className="cell-content">
+                        <a className="app-link" href={employment.href}>{employment.name}</a>
+                    </div>
+                </td>
+            )}
+            <td className="table-cell">
+                <div className="cell-content">
+                    <a className="app-link apply-link" href={applyLink.href} target="_blank" rel="noopener noreferrer">{applyLink.text}</a>
+                </div>
+            </td>
+        </tr>
+    );
 };
 
 export default TableRow;
