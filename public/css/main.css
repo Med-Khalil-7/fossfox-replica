@@ -795,6 +795,10 @@ mark {
   padding-left: 50px;
 }
 
+.app-link .highlight {
+  background: rgb(217, 247, 222);
+  color: rgb(41, 160, 62);
+}
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TableRow from "./TableRow";
 
-export default function Table({ data }) {
+export default function Table({ data ,searchQuery}) {
     const [columns, setColumns] = useState({
         founded: true,
         building: true,
@@ -158,7 +158,7 @@ export default function Table({ data }) {
                 
                 <tbody className="table-body">
                     {sortedData.map((attributes, index) => (
-                        <TableRow {...attributes} columns={columns} key={index} sortBy={sortBy} />
+                        <TableRow {...attributes} columns={columns} key={index} sortBy={sortBy} searchQuery={searchQuery} />
                     ))}
                 </tbody>
             </table>

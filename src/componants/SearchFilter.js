@@ -1,6 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function SearchFilter() {
+export default function SearchFilter({ data ,setData,searchQuery ,setSearchQuery}) {
+  const [filteredData, setFilteredData] = useState(data);
+
+  useEffect(() => {
+    const filterData = () => {
+      const newData = data.filter(item => {
+        return Object.values(item).some(field => {
+          if (typeof field === "object" && field !== null) {
+            return Object.values(field).some(value =>
+              typeof value === "string" && value.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+          } else if (typeof field === "string") {
+            return field.toLowerCase().includes(searchQuery.toLowerCase());
+          }
+          return false;
+        });
+      });
+      setFilteredData(newData);
+      setData(newData);
+    };
+
+    if (searchQuery.trim() === "") {
+      setFilteredData(data);
+    } else {
+      filterData();
+    }
+  }, [searchQuery, data]);
+
+  const handleInputChange = event => {
+    setSearchQuery(event.target.value);
+  };
+  
+
   return (
     <>
       <div className="search-filter-container">
@@ -19,8 +51,9 @@ export default function SearchFilter() {
                   required
                   placeholder="Rust, Solidity, React, Kubernetes…"
                   autoFocus
+                  value={searchQuery}
+                  onChange={handleInputChange}
                 />
-
                 <button type="submit">search</button>
               </div>
             </div>
