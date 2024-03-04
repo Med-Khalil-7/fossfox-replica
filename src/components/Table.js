@@ -128,8 +128,8 @@ export default function Table({ data ,searchQuery}) {
                                 <div className="header-content" onClick={() => handleSort("employment")}>Employment {<span className={`arrow ${sortOrder} ${sortBy === "employment" && "selected"}`} />}</div>
                             </th>
                         )}
-                        <th className="header-cell" onClick={toggleMenu}>
-                            <div className="header-content">...</div>
+                        <th className="header-cell">
+                            <div className="header-content" onClick={toggleMenu}>...</div>
                             {menuVisible && (
                                 <div className="menu-container">
                                     <div className="menu">

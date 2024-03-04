@@ -8,7 +8,7 @@ export default function Links() {
           {" "}
           <i className="fa fa-book" aria-hidden="true" />
         </div>
-        <ul>
+        <div>
           <li>
             <a className="app-link" href="https://fossfox.com/rust">Rust</a>{" "}
             <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/go">Go</a>
@@ -29,7 +29,7 @@ export default function Links() {
             <a className="app-link" href="https://fossfox.com/c">C</a>{" "}
             <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/cpp">C++</a>
           </li>
-        </ul>
+        </div>
       </div>
       <div className="lib-container">
         <div className="app-label">
@@ -37,7 +37,7 @@ export default function Links() {
           {" "}
           <i className="fa fa-laptop" aria-hidden="true" />
         </div>
-        <ul>
+        <div>
           <li>
             <a className="app-link" href="https://fossfox.com/react">React</a>{" "}
             <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/next-js">Next.js</a>
@@ -56,7 +56,7 @@ export default function Links() {
             <a className="app-link" href="https://fossfox.com/postgresql">Postgres</a>{" "}
             <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/mysql">MySQL</a>
           </li>
-        </ul>
+        </div>
       </div>
       <div className="lib-container">
         <div className="app-label">
@@ -64,7 +64,7 @@ export default function Links() {
           {" "}
           <i className="fa fa-github" aria-hidden="true" />
         </div>
-        <ul>
+        <div>
           <li>
             <a className="app-link" href="https://fossfox.com/frontend-jobs">Frontend</a>
           </li>
@@ -80,7 +80,7 @@ export default function Links() {
           <li>
             <a className="app-link" href="https://fossfox.com/devops-jobs">DevOps</a>
           </li>
-        </ul>
+        </div>
       </div>
       <div className="lib-container">
         <div className="app-label">
@@ -88,7 +88,7 @@ export default function Links() {
           {" "}
           <i className="fa fa-code" aria-hidden="true" />
         </div>
-        <ul>
+        <div>
           <li>
             <a className="app-link" href="https://fossfox.com/aws">AWS</a>
           </li>
@@ -104,7 +104,7 @@ export default function Links() {
           <li>
             <a className="app-link" href="https://fossfox.com/azure">Azure</a>
           </li>
-        </ul>
+        </div>
       </div>
       <div className="lib-container">
         <div className="app-label">
@@ -112,7 +112,7 @@ export default function Links() {
           {" "}
           <i className="fa fa-globe" aria-hidden="true" />
         </div>
-        <ul>
+        <div>
           <li>
           <a className="app-link" href="https://fossfox.com/jobs-in-san-francisco-california">SF</a>{" "}
           <span className="et">&</span>{" "}<a className="app-link" href="https://fossfox.com/jobs-in-new-york-city">NYC</a>
@@ -131,7 +131,7 @@ export default function Links() {
           <li>
             <a className="app-link" href="https://fossfox.com/jobs-in-israel">Israel</a>
           </li>
-        </ul>
+        </div>
       </div>
     </>
   );

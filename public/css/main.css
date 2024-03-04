@@ -311,7 +311,7 @@ mark {
   font-size: 11px;
   text-transform: uppercase;
 }
-.app-link {
+li .app-link {
   background-color: transparent;
   cursor: pointer;
   white-space: nowrap;
@@ -322,9 +322,7 @@ mark {
   color: #000;
   text-decoration: none;
   display: inline-block;
-}
-.app-link:hover {
-  text-decoration: underline;
+  padding-top: 3px;
 }
 
 .et{
@@ -338,6 +336,7 @@ mark {
   color: rgb(98, 111, 128);
   text-decoration: none;
   display: inline-block;
+  padding-top: 3px;
 }
 .footer-container {
   padding: 0 15px 15px;
@@ -800,5 +799,13 @@ mark {
   color: rgb(41, 160, 62);
 }
 
+.app-link:hover {
+  text-decoration: underline;
+}
 
 
+
+li {
+  padding: 0;
+  list-style-type: none;
+}

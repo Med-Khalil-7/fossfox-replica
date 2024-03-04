@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import SearchBox from "../componants/SearchBox";
-import Header from "../componants/Header";
-import Title from "../componants/Title";
-import SearchFilter from "../componants/SearchFilter";
-import Subscribe from "../componants/Subscribe";
-import Links from "../componants/Links";
-import Footer from "../componants/Footer";
-import Table from "../componants/Table";
+import SearchBox from "../components/SearchBox";
+import Header from "../components/Header";
+import Title from "../components/Title";
+import SearchFilter from "../components/SearchFilter";
+import Subscribe from "../components/Subscribe";
+import Links from "../components/Links";
+import Footer from "../components/Footer";
+import Table from "../components/Table";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState(""); // State for search query
